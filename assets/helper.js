@@ -1,5 +1,5 @@
 var currentSketch = 1;
-var sketchCount = 5;
+var sketchCount = 6;
 
 function sketchSrc() {
     var s = String(currentSketch);
