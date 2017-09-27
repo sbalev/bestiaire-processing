@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bestiaire Processing</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/w3.css">
+        <script type="text/javascript" src="assets/helper.js"></script>
+    </head>
+    <body>
+        <div class="w3-container">
+            <div class="w3-panel w3-teal w3-center">
+                <h2>Bestiaire processing</h2>
+                <p>Créations d'étudiants après 6h de cours de Processing</p>
+            </div>
+            <div class="w3-panel">
+                <iframe id="sketchFrame" src="sketch.html" style="width: 100%; border-style:none;"></iframe>
+            </div>
+        </div>
+        <div class="w3-container w3-center">
+            <p id="author">Author</p>
+        </div>
+        <div class="w3-bar w3-padding-32 w3-bottom w3-center">
+            <button id="btnFirst" class="w3-btn w3-teal" disabled onclick="currentSketch = 1; btn();">|&lt;</button>
+            <button id="btnPrev" class="w3-btn w3-teal" disabled onclick="currentSketch--; btn();">&lt;</button>
+            <button id="btnNext" class="w3-btn w3-teal" onclick="currentSketch++; btn();">&gt;</button>
+            <button id="btnLast" class="w3-btn w3-teal" onclick="currentSketch=sketchCount; btn();">&gt;|</button>
+        </div>
+        </div>
+    </body>
+</html>
