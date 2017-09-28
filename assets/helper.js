@@ -14,7 +14,7 @@ function sketchSrc() {
 function tweakCanvas(c) {
   document.getElementById('sketchFrame').style.height = (c.height + 8) + "px";
   document.getElementById('sketchFrame').style.width = (c.width + 8) + "px";
-  c.canvas.style = "border-style: solid; border-width:thin;";
+  c.canvas.style = "border-style: solid; border-width:thin; border-color: gray;";
 }
 
 function btn() {
