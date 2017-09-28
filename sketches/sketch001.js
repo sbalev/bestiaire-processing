@@ -1,6 +1,6 @@
 function setup() {
   parent.tweakCanvas(createCanvas(400, 400));
-  parent.document.getElementById('author').innerHTML = 'Thomas MARAITRE';
+  parent.document.getElementById('author').innerHTML = 'Thomas Maraitre';
 }
 
 function draw() {

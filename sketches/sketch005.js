@@ -1,7 +1,7 @@
 function setup() {
   // le code d'initialisation
   parent.tweakCanvas(createCanvas(400, 400));
-  parent.document.getElementById('author').innerHTML = 'Joachim BLUDOH';
+  parent.document.getElementById('author').innerHTML = 'Joachim Bludoh';
 
 }
 

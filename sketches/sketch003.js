@@ -1,7 +1,7 @@
 
 function setup() {
   parent.tweakCanvas(createCanvas(500, 300));
-  parent.document.getElementById('author').innerHTML = 'Adel ABID et Sullyvan PONIZY';
+  parent.document.getElementById('author').innerHTML = 'Adel Abid et Sullyvan Ponizy';
 
 }
 
@@ -30,7 +30,7 @@ function draw() {
   ellipse(180, 100, 5, 5);
   // corps pacman
 
-noStroke();
+  noStroke();
   fill(255, 255, 0);
   arc(mouseX, mouseY, 80, 80, PI/12, (2 * PI -PI/6), PIE);
   // yeux pacman
@@ -77,6 +77,7 @@ noStroke();
   fill(0);
   strokeWeight(0);
 }
+
 function keyPressed() {
   frameRate(5);
   fill(255, 255, 0);

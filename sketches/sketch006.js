@@ -1,41 +1,112 @@
 function setup() {
-  parent.tweakCanvas(createCanvas(400, 400));
-  parent.document.getElementById('author').innerHTML = 'Stefan BALEV';
-  frameRate(30);
+  parent.tweakCanvas(createCanvas(1000, 1000));
+  parent.document.getElementById('author').innerHTML = 'Killian Giard';
 }
 
 function draw() {
-  background(255);
+  frameRate(30);
+  colorMode(RGB,255);
+  background(0);
   strokeWeight(1);
 
-  // le corps
-  fill(191);
-  rect(mouseX - 35, mouseY, 70, 70);
+  //Tête
+  fill(150,200,10);
+  stroke(150,200,10);
+  arc(mouseX,mouseY - 100,300,300,PI,TAU,CHORD);
 
-  // les trois LEDs
-  colorMode(RGB, width, height, width + height);
-  fill(mouseX, 0, 0);
-  rect(mouseX - 25, mouseY + 20, 10, 10);
-  fill(0, mouseY, 0);
-  rect(mouseX - 5, mouseY + 20, 10, 10);
-  fill(0, 0, mouseX + mouseY);
-  rect(mouseX + 15, mouseY + 20, 10, 10);
-  colorMode(RGB, 255, 255, 255);
+  //Corps
+  rectMode(CORNERS);
+  rect(mouseX-150,mouseY-90,mouseX+150,mouseY+180,20);
+  rect(mouseX-150,mouseY-90,mouseX+150,mouseY+80);
 
-  // les roues
-  fill(255);
-  ellipse(mouseX - 20, mouseY + 70, 20, 20);
-  ellipse(mouseX + 20, mouseY + 70, 20, 20);
+  //Bras Gauche
+  rect(mouseX-160,mouseY-60,mouseX-220,mouseY+80);
+  arc(mouseX-190,mouseY-60,60,60,PI,TAU,CHORD);
+  arc(mouseX-190,mouseY+80,60,60,0,PI,CHORD);
 
-  // la tête
-  fill(191);
-  arc(mouseX, mouseY - 5, 70, 70, -PI, 0, CHORD);
+  //Bras Droit
+  rect(mouseX+160,mouseY-60,mouseX+220,mouseY+80);
+  arc(mouseX+190,mouseY-60,60,60,PI,TAU,CHORD);
+  arc(mouseX+190,mouseY+80,60,60,0,PI,CHORD);
 
-  // la caméra
-  fill(63, 0, 0);
-  ellipse(mouseX, mouseY - 20, 20, 20);
+  //Jambe Gauche
+  rect(mouseX-80,mouseY+180,mouseX-20,mouseY+260);
+  arc(mouseX-50,mouseY+260,60,60,0,PI,CHORD);
 
-  // l'antenne
-  strokeWeight(3);
-  line(mouseX, mouseY - 40, pmouseX, pmouseY - 80);
+  //Jambe Droite
+  rect(mouseX+20,mouseY+180,mouseX+80,mouseY+260);
+  arc(mouseX+50,mouseY+260,60,60,0,PI,CHORD);
+
+  //Antennes
+  strokeWeight(5);
+  line(mouseX-74,mouseY-220,mouseX-114,mouseY-280);
+  line(mouseX+74,mouseY-220,mouseX+114,mouseY-280);
+
+  //Oeils
+  strokeWeight(1);
+  colorMode(RGB,500);
+  fill(mouseX,0,0);
+  stroke(mouseX,0,0);
+  ellipse(mouseX-60,mouseY-160,mouseY/10,mouseY/10);
+  ellipse(mouseX+60,mouseY-160,mouseY/10,mouseY/10);
+
+  //Message
+  textSize(60);
+  textAlign(CENTER,CENTER);
+  fill(500);
+  text("Hey! My name is Andro",500,500);
+}
+
+function mousePressed() {
+  //Fond
+  frameRate(1);
+  background(450,0,0);
+  strokeWeight(1);
+  colorMode(RGB,500);
+
+  //Tête
+  fill(450,0,0);
+  stroke(100,0,0);
+  arc(mouseX,mouseY - 100,300,300,PI,TAU,CHORD);
+
+  //Corps
+  rectMode(CORNERS);
+  rect(mouseX-150,mouseY-90,mouseX+150,mouseY+180,20);
+  rect(mouseX-150,mouseY-90,mouseX+150,mouseY+80);
+
+  //Bras Gauche
+  rect(mouseX-160,mouseY-60,mouseX-220,mouseY+80);
+  arc(mouseX-190,mouseY-60,60,60,PI,TAU,CHORD);
+  arc(mouseX-190,mouseY+80,60,60,0,PI,CHORD);
+
+  //Bras Droit
+  rect(mouseX+160,mouseY-60,mouseX+220,mouseY+80);
+  arc(mouseX+190,mouseY-60,60,60,PI,TAU,CHORD);
+  arc(mouseX+190,mouseY+80,60,60,0,PI,CHORD);
+
+  //Jambe Gauche
+  rect(mouseX-80,mouseY+180,mouseX-20,mouseY+260);
+  arc(mouseX-50,mouseY+260,60,60,0,PI,CHORD);
+
+  //Jambe Droite
+  rect(mouseX+20,mouseY+180,mouseX+80,mouseY+260);
+  arc(mouseX+50,mouseY+260,60,60,0,PI,CHORD);
+
+  //Antennes
+  line(mouseX-74,mouseY-220,mouseX-114,mouseY-280);
+  line(mouseX+74,mouseY-220,mouseX+114,mouseY-280);
+
+  //Oeils
+  colorMode(RGB,10);
+  fill(10);
+  stroke(10);
+  ellipse(mouseX-60,mouseY-160,mouseY/10,mouseY/10);
+  ellipse(mouseX+60,mouseY-160,mouseY/10,mouseY/10);
+
+  //Texte
+  colorMode(RGB,100);
+  textSize(40);
+  textAlign(CENTER,CENTER);
+  fill(0);
+  text("I'm an evil Robot",500,500);
 }
