@@ -6,26 +6,23 @@
   <link rel="stylesheet" href="assets/w3.css">
 </head>
 <body>
-  <div class="w3-container">
-    <div class="w3-panel w3-teal w3-center">
-      <h2>Bestiaire processing</h2>
-      <p>Créations d'étudiants après 6h de cours de Processing</p>
-    </div>
-    <div class="w3-container">
-      <iframe id="sketchFrame" src="sketch.html" style="padding: 0; margin: auto; display: block; border-style: none;"></iframe>
-    </div>
+  <div class="w3-container w3-teal w3-center">
+    <h3>Bestiaire processing</h3>
+    <p>Créations d'étudiants après 6h de cours de Processing</p>
   </div>
   <div class="w3-container w3-center w3-text-gray">
     <p id="author">Author</p>
   </div>
-  <div class="w3-bar w3-padding-32 w3-bottom w3-center">
+  <div class="w3-container w3-center">
+    <iframe id="sketchFrame" src="sketch.html" style="padding: 0; border-style: none;"></iframe>
+  </div>
+  <div class="w3-bar w3-padding w3-bottom w3-center">
     <button id="btnFirst" class="w3-btn w3-teal" onclick="currentSketch = 1; btn();">|&lt;</button>
     <button id="btnPrev" class="w3-btn w3-teal" onclick="currentSketch--; btn();">&lt;</button>
     <button id="btnCount" class="w3-btn w3-teal" onclick="currentSketch = Math.floor((Math.random() * sketchCount) + 1); btn();"></button>
     <button id="btnNext" class="w3-btn w3-teal" onclick="currentSketch++; btn();">&gt;</button>
     <button id="btnLast" class="w3-btn w3-teal" onclick="currentSketch=sketchCount; btn();">&gt;|</button>
   </div>
-</div>
-<script type="text/javascript" src="assets/helper.js"></script>
+  <script type="text/javascript" src="assets/helper.js"></script>
 </body>
 </html>
